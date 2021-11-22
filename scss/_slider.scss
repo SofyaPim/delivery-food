@@ -1,0 +1,169 @@
+.main-slider {
+    width: 100%;
+    background: #FFFDF9;
+
+    .slide {
+        margin: 0;
+        background: url(../images/spot.png);
+        position: relative;
+        background-size: contain;
+        background-position: right center;
+        background-repeat: no-repeat;
+        padding: 2rem 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .slide-header {
+            color: $dark-font;
+            width: 50%;
+
+            h1 {
+                padding-top: 6rem;
+                padding-left: 2rem;
+                margin: 0;
+                font-family: 'Playfair', serif;
+                font-style: normal;
+                font-weight: 900;
+                font-size: 3.5rem;
+                line-height: 1;
+                text-transform: uppercase;
+
+            }
+
+            h3 {
+
+                font-family: 'Raleway', sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 1.3rem;
+                line-height: 1;
+                padding-left: 2rem;
+                margin-bottom: 2rem;
+
+            }
+        }
+
+        .slide-image {
+            margin-top: 40px;
+            width: 40%;
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 100%;
+            }
+        }
+
+    }
+
+    .slide-btns {
+        display: flex;
+        width: 600px;
+
+        .slide-btn {
+            cursor: pointer;
+            // width: 200px;
+            background: $light-font;
+            @include shadow;
+            margin: .5rem;
+            border-radius: 10px;
+            border: none;
+            position: relative;
+            transition: border 0.6s ease-in;
+            border: 1px solid $light-font;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+            // padding-top: 1rem;
+
+            &:first-child {
+                margin-left: 2rem;
+            }
+
+
+            h3 {
+                min-width: 100px;
+                padding-left: 1rem;
+                padding: 1rem;
+                font-size: 1.2rem;
+                line-height: 1.2;
+            }
+
+            .btn-icon {
+                display: none;
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                border-radius: 15px;
+                background: $accent-purple;
+
+                right: -8%;
+                transition: display 0.3s ease-in;
+                color: $light-font;
+                justify-content: center;
+                align-items: center;
+                z-index: 7;
+            }
+
+
+        }
+
+        .slide-btn.active {
+            border: 1px solid $accent-purple;
+            color: $accent-purple;
+
+            .btn-icon {
+                display: flex;
+            }
+        }
+
+
+       
+    }
+     .social-icons {
+            display: flex;
+            flex-direction: column;
+
+            position: absolute;
+            right: 0;
+ 
+.social-icon{
+   svg {
+     
+  fill: red;
+    }
+    margin: .5rem;
+}
+            img {
+                width: 30px;
+                margin: .5rem;
+
+            }
+        }
+
+}
+
+
+@media (min-width: 1024px) {
+
+    .main-slider .slide-btns .slide-btn:hover {
+        border: 1px solid $accent-purple;
+        color: $accent-purple;
+
+        .btn-icon {
+            display: flex;
+        }
+
+    }
+
+
+}
+
+@media (max-width: 1024px) {
+    .main-slider .social-icons {
+        display: none;
+    }
+}

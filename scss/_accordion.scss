@@ -1,0 +1,37 @@
+.faq{
+    padding: 2rem 4rem;
+     background:#FFFDF9;
+   .accordion{
+width: 90%;
+    font-family: 'Raleway', sans-serif;
+    .faq-mark{
+        width: 2rem;
+        height: 2rem;
+transition: transform .3s ease-in ;
+    }
+    .accordion__item{
+        overflow: hidden;
+        
+    } 
+    .faq-item{
+        border-bottom: 1px solid $accent-orange;
+    cursor: pointer;
+        display: flex;
+        align-items:center;
+        justify-content: space-between;
+
+    }
+    .faq-item.active{
+        color: $accent-purple;
+        p{
+            font-weight: 500;
+        }
+        
+    }
+    .answer-item{
+        transition: max-height .3s ease-in;
+      
+    }
+} 
+}
+

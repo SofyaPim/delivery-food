@@ -1,0 +1,15 @@
+@mixin shadow {
+    box-shadow: 15px 4px 25px 5px rgba(103, 120, 133, 0.14);
+  }
+  @mixin df-column-center{
+    display: flex;
+   flex-direction: column;
+   
+   align-items:center;
+  }
+  @mixin df-row-center{
+    display: flex;
+   flex-direction: row;
+   
+   align-items:center;
+  }
