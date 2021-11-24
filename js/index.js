@@ -1,6 +1,6 @@
 
 
-
+import './inputmask.min.js';
 import AnimateHeaders from './animate.js';
 import modal from './modal.js';
 import tabs from './tabs.js';
@@ -8,6 +8,9 @@ import showCards from './render-cards.js';
 import scrolling from './scrolling.js';
 import accordion from './accordion.js';
 import showBurger from './showBurger.js';
+import forms from './form.js';
+
+import phoneMask from "./phone-mask.js";
 
   document.addEventListener("DOMContentLoaded", () => {
   showBurger();
@@ -20,5 +23,8 @@ import showBurger from './showBurger.js';
   showCards();
   scrolling();
   accordion();
+  forms();
+  phoneMask();
 
+// localStorage.clear();
 });

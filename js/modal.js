@@ -4,6 +4,7 @@ function modal(triggerSelector, modalSelector, closeSelector) {
         closeBtn = document.querySelector(closeSelector),
         modalHeader = modal.querySelector('.popup-title'),
         errorMsg = document.querySelectorAll('span.message'),
+        selectItem = modal.querySelector('.select'),
         // priceTitle = document.createElement('h5'),
         // dayName = document.createElement('h4'),
         progName = document.createElement('h4');
@@ -20,7 +21,7 @@ function modal(triggerSelector, modalSelector, closeSelector) {
 
             if (e.target.innerHTML.trim() === 'подробнее' || e.target.innerHTML.trim() === 'заказать обратный звонок') {
                 modalHeader.innerHTML = `Заказать обратный звонок `;
-
+                selectItem.style.display = 'none';
             }
             if (e.target.parentElement.dataset.prog) {
                  // let triggerParent = e.target.parentElement;
@@ -28,8 +29,11 @@ function modal(triggerSelector, modalSelector, closeSelector) {
                 // let price = triggerParent.querySelector('.card-price').innerText;
                 // let day = triggerParent.querySelector('.card-title').innerText;
               //  day =   day.replace('А', 'У');
-                                   
-
+                    console.log(e.target.parentElement) ;    
+                    let cardsParent =  e.target.parentElement;  
+                    let cards =  cardsParent.querySelectorAll('.card'); 
+                         
+console.log(cards);
                 progName.innerHTML = `Вы выбрали меню по программе <span>${triggerGrandPa}</span>. `
                 progName.classList.add('form-commit');
                 // dayName.innerHTML = ` <br> Вы выбрали меню на этот день`;
@@ -51,7 +55,7 @@ function modal(triggerSelector, modalSelector, closeSelector) {
         // dayName.remove();
         progName.remove();
         // priceTitle.remove();
-
+        selectItem.style.display = 'block';
 
         errorMsg.forEach(item => {
             item.style.opacity = 0;
@@ -65,7 +69,7 @@ function modal(triggerSelector, modalSelector, closeSelector) {
           //  dayName.remove();
             progName.remove();
           //  priceTitle.remove();
-
+          selectItem.style.display = 'block';
 
 
             errorMsg.forEach(item => {

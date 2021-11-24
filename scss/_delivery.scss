@@ -45,6 +45,8 @@
     transition-timing-function: ease-in, ease-in;
     cursor: pointer;
     color: $accent-green;
+    line-height: 1;
+   
     &:hover {
         // background-color: $accent-purple;
          color: $accent-purple;
@@ -66,4 +68,12 @@
         max-width: 800px;
         min-height: 130px;
     }
+}
+@media (max-width: 768px) {
+   
+    .delivery .delivery-card-header .delivery-card-btn{
+         font-size: .8rem;
+         padding: 0.5rem 1rem;
+     }
+
 }

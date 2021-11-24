@@ -31,9 +31,11 @@
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    flex-wrap: wrap;
     .team-item{
-        width: 300px;
-       margin: .5rem;
+       min-width: 300px;
+       max-width: 300px;
+       margin: .5rem auto;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -66,4 +68,17 @@ overflow: hidden;
         padding: 1rem;
     }
 
+}
+@media (max-width: 768px) {
+    .about{
+     
+         padding: 1rem 2rem;
+     }
+     .about-image{
+         margin: 0;
+     }
+     .about-content{
+         flex-direction: column;
+         align-items:flex-start;
+     }
 }

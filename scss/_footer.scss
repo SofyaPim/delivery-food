@@ -60,3 +60,20 @@
     font-size: .7rem;
 }
 }
+@media (max-width: 768px) {
+    .footer{
+        align-items:flex-start;
+        .nav-ul{
+            margin: 0;
+            flex-direction: column;
+            padding: 0;
+        }
+        .footer-column.contacts .phone{
+            margin-top: 0;
+        }
+        .social-icons{
+            width: 100%;
+            margin: 2rem auto;
+        }
+    }
+}

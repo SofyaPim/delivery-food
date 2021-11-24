@@ -239,3 +239,21 @@
     transition: opacity .3s ease-in;
     scroll-behavior: smooth;
 }
+@media (max-width: 768px) {
+    .wrapper{
+        .order-btn{
+        margin: 0;
+    }
+    .section-header{
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        margin-left: 0;
+        font-size: 1.3rem;
+        max-width: 60%;
+    }
+    .regular-text{
+        font-size: 1rem;
+    }
+    } 
+    
+}
