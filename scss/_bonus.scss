@@ -34,3 +34,16 @@
 width: 30%;
     }
 }
+@media all and (max-width:768px){
+    .bonus{
+        .bonus-header{
+            h2{
+                font-size: 1rem;
+                
+            }
+            span{
+                    font-size: 2rem;
+                }
+        }
+    }
+}

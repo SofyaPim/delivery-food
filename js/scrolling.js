@@ -27,11 +27,15 @@
              navBar.classList.add('transformTransX');
              let l1 = document.querySelector('.line1'),
                  l2 = document.querySelector('.line2'),
-                 l3 = document.querySelector('.line3');
+                 l3 = document.querySelector('.line3'),
+                 line = document.querySelectorAll('.line');
              l2.classList.remove('displayNone');
              l1.classList.remove('transform45deg');
              l3.classList.remove('transformMin45deg');
              document.body.style.overflow = '';
+             line.forEach(elem => {
+                elem.classList.remove('white');
+            })
 
 
 

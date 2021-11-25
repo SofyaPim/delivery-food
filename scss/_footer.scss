@@ -16,10 +16,12 @@
         width: 100%;
         @include df-row-center;
         justify-content: space-between;
-      
+      li{
+          margin: .5rem auto;
+      }
         a.nav-item{
         color:$light-font;
-        // margin: 1rem auto;
+         margin: 1rem auto;
        // white-space: nowrap;
         
     }
@@ -63,16 +65,31 @@
 @media (max-width: 768px) {
     .footer{
         align-items:flex-start;
+        padding: 2rem;
+        flex-direction: column;
         .nav-ul{
             margin: 0;
-            flex-direction: column;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items:center;
+            justify-content: center;
+            width: 70%;
             padding: 0;
         }
         .footer-column.contacts .phone{
             margin-top: 0;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: $accent-orange;
+        }
+        .footer-column.contacts .mail{
+            margin-top: 0;
+            font-size: 1.5rem;
+            font-weight: 500;
+            
         }
         .social-icons{
-            width: 100%;
+            width: 70%;
             margin: 2rem auto;
         }
     }

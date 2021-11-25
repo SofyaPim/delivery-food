@@ -12,22 +12,29 @@ const accordion = () => {
     questBtn.forEach(btn => {
 
         btn.addEventListener('click', (e) => {
-            questBtn.forEach(item => {
-                item.classList.remove('active');
-            })
+
             let mark = e.currentTarget.querySelector('.faq-mark');
 
+            questBtn.forEach(item => {
+                item.classList.remove('active');
+               
+            })
+            
             answerBtn.forEach(item => {
                 item.style.maxHeight = '0px';
             })
             marks.forEach(item => {
-                item.classList.remove('transformRotate');
+                 item.classList.remove('transformRotate');
+               
             })
+            if(e.currentTarget.classList.contains('active')){
+               console.log('active')
+            }
 
 
             if (!mark.classList.contains('transformRotate')) {
+                 
                   mark.classList.add('transformRotate');
-
                 e.currentTarget.nextElementSibling.style.maxHeight = '200px';
                 e.currentTarget.classList.add('active');
             } else  {

@@ -115,17 +115,7 @@ form.parentNode.style.display = 'none';
              if (!Validate(inputsForm)) {
                 return;
             }
-            //create field time to formData
-            // if (!localStorage.getItem('day')) {
-            //     let discountTime = 60000; //1min //(3600000 * 24)//24hours//3600000 //hour
-            //     let currentDay = Date.now() + discountTime;
-            //     localStorage.setItem('day', currentDay.toString());
-
-            // }
-
-            // const locaStorageDay = +localStorage.getItem('day');
-            // const day = new Date(locaStorageDay);
-            // let submitDay = day.toString().slice(3, 24);
+           
 
             let statusMessage = document.createElement('div');
             statusMessage.classList.add('status-message');
@@ -147,7 +137,16 @@ form.parentNode.style.display = 'none';
                 let progName = item.querySelector('.form-commit span').innerHTML;
                 formData.append('Программа', `${progName}`.toString());
             }
-
+            if(item.querySelector('._sum span')){
+                let sum = item.querySelector('._sum span').innerHTML;
+              
+                formData.append('Сумма', `${sum}`.toString());
+            }
+            if(item.querySelector('._days')){
+                let days = item.querySelector('._days').innerHTML;
+               
+                formData.append('Дни', `${days}`.toString());
+            }
             if (item.querySelector('._discount-price')) {
 
                 let price = item.querySelector('._discount-price').innerHTML;
@@ -158,11 +157,11 @@ form.parentNode.style.display = 'none';
 
 
             formData.delete('agreement');
-            if (+localStorage.getItem('day') - Date.now() > 0) {
-                formData.append('Время окончания скидки', submitDay);
-            } else {
-                formData.append('Скидка', 'без скидки');
-            }
+            // if (+localStorage.getItem('day') - Date.now() > 0) {
+            //     formData.append('Время окончания скидки', submitDay);
+            // } else {
+            //     formData.append('Скидка', 'без скидки');
+            // }
 
             statusMessage.textContent = message.loading;
            
@@ -183,10 +182,10 @@ form.parentNode.style.display = 'none';
                 .finally(() => {
                     clearInputs(inputs);
 
-                    if (+localStorage.getItem('day') - Date.now() > 0) {
-                        timer();
+                    // if (+localStorage.getItem('day') - Date.now() > 0) {
+                    //     timer();
 
-                    }
+                    // }
 
                     document.body.append(bodyMessage);
                     setTimeout(() => {

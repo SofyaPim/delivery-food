@@ -94,3 +94,11 @@
       }
 
 }
+@media all and (max-width:768px){
+    .reviews{
+        padding: 2rem;
+        .reviews-cards{
+            padding: 0;
+        }
+    }
+}

@@ -1,49 +1,71 @@
+
 function modal(triggerSelector, modalSelector, closeSelector) {
+
+
     const triggers = document.querySelectorAll(triggerSelector),
         modal = document.querySelector(modalSelector),
         closeBtn = document.querySelector(closeSelector),
         modalHeader = modal.querySelector('.popup-title'),
         errorMsg = document.querySelectorAll('span.message'),
-        selectItem = modal.querySelector('.select'),
-        // priceTitle = document.createElement('h5'),
-        // dayName = document.createElement('h4'),
-        progName = document.createElement('h4');
-
+        progName = document.createElement('h4'),
+        priceMsg = document.createElement('h4'),
+        days = document.createElement('h4');
+        days.classList.add('form-commit');
+        days.classList.add('_days');
+    priceMsg.classList.add('form-commit');
+    priceMsg.classList.add('_sum');
+    progName.classList.add('form-commit');
 
 
     triggers.forEach(trigger => {
-      
+
 
         trigger.addEventListener('click', (e) => {
             // console.log(triggerGrandPa.dataset.prog);
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
+            let msg = e.target.parentElement.querySelector('span');
+            if (e.target.previousElementSibling.innerHTML.trim().slice(0, -1) === '0') {
+                // console.log(e.target.parentElement);
 
-            if (e.target.innerHTML.trim() === 'подробнее' || e.target.innerHTML.trim() === 'заказать обратный звонок') {
-                modalHeader.innerHTML = `Заказать обратный звонок `;
-                selectItem.style.display = 'none';
+                msg.style.opacity = '1';
+            } else if(e.target.previousElementSibling.innerHTML.trim().slice(0, -1) != '0' || !e.target.parentElement.classList.has('calc')) {
+               try {
+                   msg.style.opacity = '0'; 
+               } catch (error) {
+                   
+               }
+               
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+                // console.log(e.target.parentElement);
+                if (e.target.innerHTML.trim() === 'подробнее' || e.target.innerHTML.trim() === 'заказать обратный звонок') {
+                    modalHeader.innerHTML = `Заказать обратный звонок `;
+                    // selectItem.style.display = 'none';
+                }
+                if (e.target.parentElement.parentElement.dataset.prog) {
+                   let curentDays =  e.target.parentElement.parentElement.querySelector('.__select-title').textContent;
+                  console.log(days);
+                  days.innerHTML = `Выбранный период: <span>${curentDays}</span>`;
+                    let triggerGrandPa = e.target.parentElement.parentElement.dataset.prog;
+                    let priceOrder = e.target.previousElementSibling.innerHTML.trim();
+                   
+                    progName.innerHTML = `Вы выбрали меню по программе <span>${triggerGrandPa}</span>. `
+
+                    modalHeader.after(progName); //добавление названия тарифа
+                    progName.after(days);
+                    console.log(priceOrder.slice(0, -1))
+                    if (priceOrder.slice(0, -1) === '0') {
+
+                        priceMsg.innerHTML = 'Выберите день недели';
+
+                    } else {
+                        priceMsg.innerHTML = `Сумма заказа составляет <span>${priceOrder}</span> `;
+
+                    }
+                    progName.after(priceMsg);
+                  
+                }
             }
-            if (e.target.parentElement.dataset.prog) {
-                 // let triggerParent = e.target.parentElement;
-        let triggerGrandPa = e.target.parentElement.dataset.prog;
-                // let price = triggerParent.querySelector('.card-price').innerText;
-                // let day = triggerParent.querySelector('.card-title').innerText;
-              //  day =   day.replace('А', 'У');
-                    console.log(e.target.parentElement) ;    
-                    let cardsParent =  e.target.parentElement;  
-                    let cards =  cardsParent.querySelectorAll('.card'); 
-                         
-console.log(cards);
-                progName.innerHTML = `Вы выбрали меню по программе <span>${triggerGrandPa}</span>. `
-                progName.classList.add('form-commit');
-                // dayName.innerHTML = ` <br> Вы выбрали меню на этот день`;
-                // modalHeader.innerHTML = `Оформление заказа`;
-                // progName.innerHTML = `${triggerGrandPa.dataset.prog}`;
-                // priceTitle.innerHTML = `сумма заказа составляет${price}`;
-                modalHeader.after(progName); //добавление названия тарифа
-                // progName.after(dayName);
-                // dayName.after(priceTitle);
-            }
+
         })
 
 
@@ -52,10 +74,10 @@ console.log(cards);
     closeBtn.addEventListener('click', () => {
         modal.style.display = 'none';
         document.body.style.overflow = '';
-        // dayName.remove();
+        
         progName.remove();
-        // priceTitle.remove();
-        selectItem.style.display = 'block';
+        priceMsg.remove();
+        days.remove();
 
         errorMsg.forEach(item => {
             item.style.opacity = 0;
@@ -66,10 +88,10 @@ console.log(cards);
 
             modal.style.display = 'none';
             document.body.style.overflow = '';
-          //  dayName.remove();
+           
             progName.remove();
-          //  priceTitle.remove();
-          selectItem.style.display = 'block';
+            priceMsg.remove();
+            days.remove();
 
 
             errorMsg.forEach(item => {

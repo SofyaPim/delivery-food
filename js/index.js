@@ -9,7 +9,7 @@ import scrolling from './scrolling.js';
 import accordion from './accordion.js';
 import showBurger from './showBurger.js';
 import forms from './form.js';
-
+import customSelect from './select.js';
 import phoneMask from "./phone-mask.js";
 
   document.addEventListener("DOMContentLoaded", () => {
@@ -25,6 +25,7 @@ import phoneMask from "./phone-mask.js";
   accordion();
   forms();
   phoneMask();
+  customSelect();
 
 // localStorage.clear();
 });

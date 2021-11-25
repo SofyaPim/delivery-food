@@ -1,14 +1,17 @@
 .main-slider {
     width: 100%;
     background: #FFFDF9;
-
-    .slide {
-        margin: 0;
-        background: url(../images/spot.png);
+      background: url(../images/spot.png);
         position: relative;
         background-size: contain;
-        background-position: right center;
+        background-position: 135% -100px;
         background-repeat: no-repeat;
+// .slider-wrapper{
+        
+// }
+    .slide {
+        margin: 0;
+  
         padding: 2rem 4rem;
         display: flex;
         justify-content: space-between;
@@ -64,7 +67,7 @@
 
         .slide-btn {
             cursor: pointer;
-            
+
             background: $light-font;
             @include shadow;
             margin: .5rem;
@@ -78,14 +81,14 @@
             align-items: center;
             text-decoration: none;
             color: inherit;
-            
+//padding: 1rem 2rem;
 
             &:first-child {
                 margin-left: 2rem;
             }
 
 
-            h3 {
+            p {
                 min-width: 100px;
                 padding-left: 1rem;
                 padding: 1rem;
@@ -123,28 +126,31 @@
         }
 
 
-       
-    }
-     .social-icons {
-            display: flex;
-            flex-direction: column;
 
-            position: absolute;
-            right: 0;
- 
-.social-icon{
-   svg {
-     
-  fill: red;
     }
-    margin: .5rem;
-}
-            img {
-                width: 30px;
-                margin: .5rem;
 
+    .social-icons {
+        display: flex;
+        flex-direction: column;
+
+        position: absolute;
+        right: 0;
+
+        .social-icon {
+            svg {
+
+                fill: red;
             }
+
+            margin: .5rem;
         }
+
+        img {
+            width: 30px;
+            margin: .5rem;
+
+        }
+    }
 
 }
 
@@ -164,29 +170,47 @@
 
 }
 
+
 @media (max-width: 1024px) {
     .main-slider .social-icons {
         display: none;
     }
 }
+
 @media (max-width: 768px) {
-    .main-slider .slide{
+    .main-slider{
+        background-position: 150px 0px;
+        background-size:150%;
+    }
+    .main-slider .slide {
         align-content: flex-start;
+        padding: 2rem 3rem;
     }
-    .main-slider .slide .slide-image {
+
+    .main-slider .slide .slide-image img{
         margin-top: 0;
-        width: 80%;
+        width: 31rem;
+        margin-left: 10rem;
     }
+
     .main-slider .slide .slide-header h1 {
         font-size: 2rem;
         padding-left: 0;
+       
     }
-    .main-slider .slide .slide-header h3{
+
+    .main-slider .slide .slide-header h3 {
         padding-left: 0;
         font-size: 1rem;
-    } 
-    .main-slider .slide-btns .slide-btn:first-child{
+         margin-bottom: 1rem;
+    }
+
+    .main-slider .slide-btns .slide-btn:first-child {
         margin-left: 0;
     }
-   
+    .main-slider .slide-btns{
+        flex-direction: column;
+        width: 13rem;
+    }
+
 }
