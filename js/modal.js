@@ -35,7 +35,10 @@ function modal(triggerSelector, modalSelector, closeSelector) {
                }
                
                 modal.style.display = 'block';
-                document.body.style.overflow = 'hidden';
+                if(window.outerWidth > 1024){
+                    document.body.style.overflow = 'hidden';
+                }
+                
                 // console.log(e.target.parentElement);
                 if (e.target.innerHTML.trim() === 'подробнее' || e.target.innerHTML.trim() === 'заказать обратный звонок') {
                     modalHeader.innerHTML = `Заказать обратный звонок `;
