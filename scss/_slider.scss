@@ -1,17 +1,17 @@
 .main-slider {
     width: 100%;
     background: #FFFDF9;
-      background: url(../images/spot.png);
-        position: relative;
-        background-size: contain;
-        background-position: 135% -100px;
-        background-repeat: no-repeat;
-// .slider-wrapper{
-        
-// }
+    background: url(../images/spot.png);
+    position: relative;
+    background-size: contain;
+    background-position: 135% -100px;
+    background-repeat: no-repeat;
+    // .slider-wrapper{
+
+    // }
     .slide {
         margin: 0;
-  
+
         padding: 2rem 4rem;
         display: flex;
         justify-content: space-between;
@@ -20,7 +20,7 @@
 
         .slide-header {
             color: $dark-font;
-            width: 50%;
+            min-width: 50%;
 
             h1 {
                 padding-top: 6rem;
@@ -50,7 +50,7 @@
 
         .slide-image {
             margin-top: 40px;
-            width: 40%;
+            width: 50vw;
             display: flex;
             justify-content: center;
 
@@ -81,7 +81,7 @@
             align-items: center;
             text-decoration: none;
             color: inherit;
-//padding: 1rem 2rem;
+            //padding: 1rem 2rem;
 
             &:first-child {
                 margin-left: 2rem;
@@ -157,6 +157,7 @@
 
 @media (min-width: 1024px) {
 
+ 
     .main-slider .slide-btns .slide-btn:hover {
         border: 1px solid $accent-purple;
         color: $accent-purple;
@@ -178,39 +179,90 @@
 }
 
 @media (max-width: 768px) {
-    .main-slider{
+    .main-slider {
         background-position: 150px 0px;
-        background-size:150%;
-    }
-    .main-slider .slide {
-        align-content: flex-start;
-        padding: 2rem 3rem;
+        background-size: 150%;
+
+        .slide {
+            align-content: flex-start;
+            flex-direction: column-reverse;
+            padding: 0rem 0rem;
+            margin: 0;
+            justify-content: center;
+
+            .slide-header {
+                //new
+                min-width: 100%;
+                padding: 0 4rem;
+
+                h1 {
+                    font-size: 2rem;
+                    padding-top: 0;
+                }
+
+                h3 {
+                    font-size: 1rem;
+                    margin-bottom: 1rem;
+                }
+            }
+
+            .slide-image {
+                width: 60%;
+                img {
+                    //new
+                    margin-top: 0;
+                  //  width: 12rem;
+                    margin-left: 4rem;
+                }
+            }
+
+        }
+
+        .slide-btns {
+            width: 90%;
+            margin: 0 auto;
+            .slide-btn {
+                &:first-child {
+                    //new
+                    margin-left: 0;
+                }
+                p {
+                    min-width: 100px;
+                    padding-left: 1rem;
+                    padding: .5rem;
+                    font-size: 1rem;
+                    line-height: 1;
+                    margin: 0;
+                }
+
+                .btn-icon {
+                    opacity: 0;
+                }
+            }
+            .slide-btn.active {
+                border: 1px solid $accent-purple;
+                color: $accent-purple;
+                .btn-icon {
+                    display: flex;
+                }
+            }
+        }
+
+        .social-icons {
+            display: none;
+        }
+
     }
 
-    .main-slider .slide .slide-image img{
-        margin-top: 0;
-        width: 31rem;
-        margin-left: 10rem;
-    }
 
-    .main-slider .slide .slide-header h1 {
-        font-size: 2rem;
-        padding-left: 0;
-       
-    }
 
-    .main-slider .slide .slide-header h3 {
-        padding-left: 0;
-        font-size: 1rem;
-         margin-bottom: 1rem;
-    }
 
-    .main-slider .slide-btns .slide-btn:first-child {
-        margin-left: 0;
-    }
-    .main-slider .slide-btns{
-        flex-direction: column;
-        width: 13rem;
-    }
+
+
+
+
+
+
+
 
 }
