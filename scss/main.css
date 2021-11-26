@@ -235,7 +235,7 @@
 
 .afterSubmitMsg {
   position: fixed;
-  font-size: 2rem;
+  font-size: 100%;
   width: 100%;
   height: 30%;
   right: 0;
@@ -254,6 +254,8 @@
           justify-content: center;
   color: #fcfffc;
   font-family: "Raleway", sans-serif;
+  text-align: center;
+  opacity: .7;
 }
 
 #page-up {
