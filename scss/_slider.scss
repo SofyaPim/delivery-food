@@ -155,7 +155,7 @@
 }
 
 
-@media (min-width: 1024px) {
+@media all and (min-width: 1024px) {
 
  
     .main-slider .slide-btns .slide-btn:hover {
@@ -172,13 +172,13 @@
 }
 
 
-@media (max-width: 1024px) {
+@media all and (max-width: 1024px) {
     .main-slider .social-icons {
         display: none;
     }
 }
 
-@media (max-width: 768px) {
+@media all and (max-width: 768px) {
     .main-slider {
         background-position: 150px 0px;
         background-size: 150%;
@@ -192,12 +192,14 @@
 
             .slide-header {
                 //new
-                min-width: 100%;
+                width: 100%;
                 padding: 0 4rem;
 
                 h1 {
                     font-size: 2rem;
                     padding-top: 0;
+                    word-wrap: break-all;
+                    //white-space: normal;
                 }
 
                 h3 {
@@ -221,6 +223,8 @@
         .slide-btns {
             width: 90%;
             margin: 0 auto;
+            flex-wrap: wrap;
+            justify-content: flex-start;
             .slide-btn {
                 &:first-child {
                     //new

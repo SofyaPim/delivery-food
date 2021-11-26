@@ -35,7 +35,12 @@ const accordion = () => {
             if (!mark.classList.contains('transformRotate')) {
                  
                   mark.classList.add('transformRotate');
-                e.currentTarget.nextElementSibling.style.maxHeight = '200px';
+                  if(window.outerWidth < 414){
+                    e.currentTarget.nextElementSibling.style.maxHeight = '300px';
+                  }else{
+                       e.currentTarget.nextElementSibling.style.maxHeight = '200px';
+                  }
+               
                 e.currentTarget.classList.add('active');
             } else  {
                  mark.classList.remove('transformRotate');

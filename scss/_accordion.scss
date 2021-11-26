@@ -42,11 +42,28 @@
         }
     }
 }
-@media all and (max-width: 768px){
-    .faq{
+
+@media all and (max-width: 768px) {
+    .faq {
         padding: 2rem;
         // ul{
         //     padding: 0;
         // }
+    }
+}
+
+@media all and (max-width: 414px) {
+    .faq {
+        padding: 0rem;
+
+        .section-header {
+            padding-left: 2rem;
+
+        }
+
+        .regular-text {
+            font-size: .9rem;
+            line-height: 1;
+        }
     }
 }

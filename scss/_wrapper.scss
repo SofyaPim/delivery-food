@@ -272,3 +272,29 @@
     }
 
 }
+@media all and (max-width: 414px) {
+    .wrapper{
+
+   
+    .section-header {
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        margin-left: 0;
+        font-size: 1.2rem;
+        max-width: 90%;
+    }
+
+    .regular-text {
+        font-size: 1rem;
+        line-height: 1.1;
+    }
+    .small-header {
+       
+        font-weight: 400;
+        text-transform: none;
+    }
+    .nav-bar{
+        left: 20%;
+    } 
+}
+}

@@ -47,3 +47,15 @@ width: 30%;
         }
     }
 }
+@media all and (max-width:414px){
+    .bonus {
+        .bonus-image {
+       display: none;
+       
+    }
+    .bonus-header{
+        margin: 2rem ;
+        margin-left: 0;
+    }
+    }
+}
