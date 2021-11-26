@@ -28,7 +28,10 @@ function showBurger() {
                 l1.classList.remove('transform45deg');
                 l3.classList.remove('transformMin45deg');
                 document.body.style.overflow = '';
-
+                line.forEach(elem => {
+                    elem.classList.toggle('white');
+                })
+               
             
      
     })
