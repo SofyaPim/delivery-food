@@ -236,7 +236,22 @@
 
 
 }
-
+.afterSubmitMsg {
+    position: fixed;
+    font-size: 2rem;
+    width: 100%;
+    height: 30%;
+    right: 0;
+    top: 0;
+    background-color: $accent-purple;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    z-index: 99;
+    justify-content: center;
+    color: $light-font;
+    font-family: "Raleway", sans-serif;
+  }
 #page-up {
     opacity: 0;
     position: fixed;
