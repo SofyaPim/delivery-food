@@ -14,16 +14,19 @@
 
         padding: 2rem 4rem;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
         overflow: hidden;
 
         .slide-header {
             color: $dark-font;
-            min-width: 50%;
+            width: 45vw;
+            //  height: 23rem;
+            transition: transform .3s ease-in;
 
             h1 {
-                padding-top: 6rem;
+                padding-top: 30%;
                 padding-left: 2rem;
                 margin: 0;
                 font-family: 'Playfair', serif;
@@ -50,12 +53,20 @@
 
         .slide-image {
             margin-top: 40px;
-            width: 50vw;
+            // width: 50vw;
             display: flex;
-            justify-content: center;
+            // justify-content: center;
 
             img {
-                width: 100%;
+                width: 50vw;
+            }
+
+            &__content {
+                display: flex;
+                margin: 0 auto;
+                flex-direction: row;
+                justify-content: space-between;
+
             }
         }
 
@@ -63,66 +74,71 @@
 
     .slide-btns {
         display: flex;
-        width: 600px;
+        //  width: 600px;
 
         .slide-btn {
             cursor: pointer;
 
-            background: $light-font;
-            @include shadow;
+            background: #ffffff00;
+            //  @include shadow;
             margin: .5rem;
-            border-radius: 10px;
+            //  border-radius: 10px;
             border: none;
             position: relative;
-            transition: border 0.6s ease-in;
-            border: 1px solid $light-font;
+            // transition: border 0.6s ease-in;
+            //border: 1px solid $light-font;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            color: inherit;
+
+            // justify-content: center;
+            // align-items: center;
+            //  text-decoration: none;
+            // color: inherit;
             //padding: 1rem 2rem;
-
-            &:first-child {
-                margin-left: 2rem;
+            img {
+                transition: transform .3s ease-in;
+                width: 4rem;
             }
 
 
-            p {
-                min-width: 100px;
-                padding-left: 1rem;
-                padding: 1rem;
-                font-size: 1.2rem;
-                line-height: 1.2;
-                margin: 0;
-            }
+            // p {
+            //     min-width: 100px;
+            //     padding-left: 1rem;
+            //     padding: 1rem;
+            //     font-size: 1.2rem;
+            //     line-height: 1.2;
+            //     margin: 0;
+            // }
 
-            .btn-icon {
-                display: none;
-                position: absolute;
-                width: 30px;
-                height: 30px;
-                border-radius: 15px;
-                background: $accent-purple;
+            // .btn-icon {
+            //     display: none;
+            //     position: absolute;
+            //     width: 30px;
+            //     height: 30px;
+            //     border-radius: 15px;
+            //     background: $accent-purple;
 
-                right: -8%;
-                transition: display 0.3s ease-in;
-                color: $light-font;
-                justify-content: center;
-                align-items: center;
-                z-index: 7;
-            }
+            //     right: -8%;
+            //     transition: display 0.3s ease-in;
+            //     color: $light-font;
+            //     justify-content: center;
+            //     align-items: center;
+            //     z-index: 7;
+            // }
 
 
         }
 
         .slide-btn.active {
-            border: 1px solid $accent-purple;
-            color: $accent-purple;
 
-            .btn-icon {
-                display: flex;
+            // border: 1px solid $accent-purple;
+            // color: $accent-purple;
+            img {
+                transform: scale(1.1);
             }
+
+            // .btn-icon {
+            //     display: flex;
+            // }
         }
 
 
@@ -132,7 +148,7 @@
     .social-icons {
         display: flex;
         flex-direction: column;
-
+        top: 25%;
         position: absolute;
         right: 0;
 
@@ -157,14 +173,18 @@
 
 @media all and (min-width: 1024px) {
 
- 
-    .main-slider .slide-btns .slide-btn:hover {
-        border: 1px solid $accent-purple;
-        color: $accent-purple;
 
-        .btn-icon {
-            display: flex;
+    .main-slider .slide-btns .slide-btn:hover {
+
+        // border: 1px solid $accent-purple;
+        // color: $accent-purple;
+        img {
+            transform: scale(1.1);
         }
+
+        // .btn-icon {
+        //     display: flex;
+        // }
 
     }
 
@@ -176,76 +196,77 @@
     .main-slider .social-icons {
         display: none;
     }
+
+    .main-slider .slide .slide-header h1 {
+        font-size: 3rem;
+    }
 }
 
 @media all and (max-width: 768px) {
     .main-slider {
+        padding: 2rem;
         background-position: 150px 0px;
         background-size: 150%;
 
         .slide {
             align-content: flex-start;
-            flex-direction: column-reverse;
+            //  
             padding: 0rem 0rem;
             margin: 0;
             justify-content: center;
 
             .slide-header {
-                //new
                 width: 100%;
-                padding: 0 4rem;
+                padding-top: 20%;
 
                 h1 {
-                    font-size: 2rem;
-                    padding-top: 0;
-                    word-wrap: break-all;
-                    //white-space: normal;
+                    font-size: 1.8rem;
+                    padding: 1rem;
+                    padding-bottom: 0;
+
                 }
 
                 h3 {
                     font-size: 1rem;
+                    padding: 1rem;
                     margin-bottom: 1rem;
+                    margin-top: 0;
+
                 }
             }
 
             .slide-image {
-                width: 60%;
+                width: 100%;
+
+                // &__content {
+                //     flex-direction: column-reverse;
+                // }
+
                 img {
                     //new
-                    margin-top: 0;
-                  //  width: 12rem;
-                    margin-left: 4rem;
+                    margin: 0 auto;
+                    width: 50vw;
+                    // margin-left: 4rem;
                 }
             }
 
         }
 
         .slide-btns {
-            width: 90%;
-            margin: 0 auto;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            .slide-btn {
-                &:first-child {
-                    //new
-                    margin-left: 0;
-                }
-                p {
-                    min-width: 100px;
-                    padding-left: 1rem;
-                    padding: .5rem;
-                    font-size: 1rem;
-                    line-height: 1;
-                    margin: 0;
-                }
+            width: 70%;
 
-                .btn-icon {
-                    opacity: 0;
-                }
+
+            .slide-btn {
+
+
+                margin-left: 0;
+
             }
+
             .slide-btn.active {
                 border: 1px solid $accent-purple;
                 color: $accent-purple;
+
                 .btn-icon {
                     display: flex;
                 }
@@ -259,14 +280,54 @@
     }
 
 
+}
+
+@media all and (max-width: 540px) {
+    .main-slider {
+
+
+        .slide {
 
 
 
 
+            .slide-image {
+                img {
+                    width: 70vw;
+                }
+
+                &__content {
+                    flex-direction: column-reverse;
+                    padding-right: 1rem;
+                }
 
 
+            }
+
+            .slide-header {
+
+                padding-top: 0;
+
+            }
+
+        }
 
 
+    }
 
+}
 
+@media all and (max-width: 416px) {
+    .main-slider{
+        padding: 1rem;
+    }
+    .main-slider .slide .slide-header h1 {
+        padding-left: 0;
+       // text-align: center;
+    }
+
+    .main-slider .slide .slide-header h3 {
+        padding-left: 0;
+      //  text-align: center;
+    }
 }

@@ -43,7 +43,7 @@
     }
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 769px) {
     .faq {
         padding: 2rem;
         // ul{
@@ -52,9 +52,10 @@
     }
 }
 
-@media all and (max-width: 414px) {
+@media all and (max-width: 416px) {
     .faq {
         padding: 0rem;
+        padding-top: 1rem;
 
         .section-header {
             padding-left: 2rem;

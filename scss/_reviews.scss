@@ -77,6 +77,7 @@
             }
         }
     }
+
     .reviews-cards::-webkit-scrollbar-track {
         box-shadow: 5px 5px 5px -5px #76489b9f inset;
         background-color: $light-font;
@@ -86,19 +87,35 @@
     .reviews-cards::-webkit-scrollbar {
         width: 10px;
         background: linear-gradient(269.82deg, #FFCA41 -2.39%, rgba(196, 196, 196, 0) 85.86%);
-      }
+    }
+
     .reviews-cards::-webkit-scrollbar-thumb {
         border-radius: 10px;
         background: linear-gradient(269.82deg, #FFCA41 -2.39%, rgba(196, 196, 196, 0) 85.86%);
-        
-      }
+
+    }
 
 }
-@media all and (max-width:768px){
-    .reviews{
+
+@media all and (max-width:769px) {
+    .reviews {
         padding: 2rem;
-        .reviews-cards{
+
+        .reviews-cards {
             padding: 0;
+        }
+    }
+}
+
+@media all and (max-width:416px) {
+    .reviews{
+        padding: 1rem;
+    }
+    .reviews .reviews-cards a.card {
+        width: 250px;
+
+        .small-text {
+            font-size: .8rem;
         }
     }
 }

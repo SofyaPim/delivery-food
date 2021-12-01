@@ -20,9 +20,9 @@
 
     .nav-burger {
 
-        margin: 1rem;
+        margin: 1.3rem;
         width: 2.5rem;
-        height: 2rem;
+        height: 1rem;
         display: none;
         // display: flex;
         flex-direction: column;
@@ -32,18 +32,19 @@
         cursor: pointer;
     }
 
-     .line {
+    .line {
         background-color: $dark-font;
         width: 100%;
         height: 1px;
         transition: all 0.5s ease-in;
     }
-    .white{
-        background-color:$light-font;
+
+    .white {
+        background-color: $light-font;
     }
 
 
-  
+
 }
 
 @media all and(max-width: 1024px) {
@@ -58,6 +59,13 @@
                 display: none;
             }
 
+            .logo {
+                img {
+                    width: 3rem;
+                }
+
+            }
+
 
         }
 
@@ -67,6 +75,16 @@
 
     }
 }
-@media all and(max-width: 768px){
 
+@media all and(max-width: 416px) {
+    .header {
+        .nav {
+            .logo {
+                img {
+                    width: 3rem;
+                }
+
+            }
+        }
+    }
 }

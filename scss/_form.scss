@@ -1,209 +1,229 @@
-.overlay{
-    position: fixed;
-    background:#76489b69;
-  
-    width: 100vw;
-    color:$dark-font;
-     top: 0;
-     right: 0;
-     bottom: 0;
-     left: 0;
-     z-index: 60;
-     padding-top: 4rem;
-     transition: display 0.3s ease-in;
-    display: none;
-     
+.overlay {
+  position: fixed;
+  background: #76489b69;
 
-     .popup{
-         position: relative;
-         margin: 0 auto;
-         background:$light-font;
-        width: 50%;
-        border-radius:10px;
-        display: flex;
-        flex-direction: column;
-     
-         
-     }
-     .form__body{
-         padding: 2rem;
+  width: 100vw;
+  color: $dark-font;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 60;
+  padding-top: 4rem;
+  transition: display 0.3s ease-in;
+  display: none;
 
-     }
-     .popup-title{
-        font-family: 'Raleway', sans-serif;
-        font-weight: 900;
-        font-size: 1.3rem;
-        line-height: 1;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        padding-bottom: 2rem;
-        margin: 0;
-     }
-     .message{
-         opacity: 0;
-         color:$error;
-         font-family: 'Raleway', sans-serif;
-         font-size: .8rem;
-         margin-bottom: .5rem;
-     }
-     .form-commit{
-        font-family: 'Raleway', sans-serif;
-        font-weight: 500;
-        margin: 0;
-         span{
-             color:$accent-purple;
-             text-transform: uppercase;
-         }
-     }
-     .popup__close{
-         position: absolute;
-         img{
-             width: 100%;
-         }
-         width: 20px;
-         right: 1rem;
-         top: 1rem;
-         cursor: pointer;
-     }
-     input{
-        display: block;
-        min-width: 90%;
-       outline: none;
-        background: none;
-        border:1px solid $dark-font;
-        appearance: none;
-        font-family: 'Raleway', sans-serif;
-        font-size: 1rem;
-        color: $dark-font;
-        padding: .5rem;
 
-      border-radius: 5px;
-      &:focus{
-          outline: none;
-          border:1px solid $accent-purple;
-      }
-       
+  .popup {
+    position: relative;
+    margin: 0 auto;
+    background: $light-font;
+    width: 50%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+
+  }
+
+  .form__body {
+    padding: 2rem;
+
+  }
+
+  .popup-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    font-size: 1.3rem;
+    line-height: 1;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+    margin: 0;
+  }
+
+  .message {
+    opacity: 0;
+    color: $error;
+    font-family: 'Raleway', sans-serif;
+    font-size: .8rem;
+    margin-bottom: .5rem;
+  }
+
+  .form-commit {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    margin: 0;
+
+    span {
+      color: $accent-purple;
+      text-transform: uppercase;
     }
-    [type='submit']{
-        display: block;
-        min-width: 90%;
-       outline: none;
-       background:$accent-purple;
-       color: $light-font;
-        border:1px solid $accent-purple;
-        appearance: none;
-        font-family: 'Raleway', sans-serif;
-        font-size: 1rem;
-        
-        padding: .5rem;
+  }
 
-      border-radius: 5px;
-      &:active{
-        outline: none;
-        border:1px solid $accent-green;
-        background:$accent-green;
-        color: $light-font;
-      }
-      &:focus{
-          outline: none;
-          border:1px solid $accent-green;
-          background:$accent-green;
-          color: $light-font;
-      }
-       
+  .popup__close {
+    position: absolute;
+
+    img {
+      width: 100%;
     }
-//      .select{
-//          position: relative;
-//          margin-bottom: 1rem;
-//          outline: none;
-//          &:after{
-//              content: '';
-//              display: block;
-// //              width: 0;
-// // height: 0;
-// border-style: solid;
-// border-width: 10px 10px 0 10px;
-// border-color: #a46fcf transparent transparent transparent;
-// position: absolute;
-// top:40%;
-// right: 1rem;
-// pointer-events: none;
 
-//          }
-        
-//          select{
-//              display: block;
-//              min-width: 100%;
-//             outline: none;
-//              background: none;
-//              border:1px solid $dark-font;
-//              appearance: none;
-//              font-family: 'Raleway', sans-serif;
-//              font-size: 1rem;
-//              color: $dark-font;
-//              padding: .5rem;
+    width: 20px;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+  }
 
-//            border-radius: 5px;
-//            &:focus{
-//                outline: none;
-//                border:1px solid $accent-purple;
-//            }
-            
-//          }
-//      }
-     .form-agree .checkbox_label {
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        position: relative;
-        font-size: 0.7rem;
-        color: $accent-purple;
-        padding-left: 1rem;
-        flex-wrap: wrap;
-        p{
-          padding-left: 2rem;
-        }
-        .message{
-          position: absolute;
-          bottom: -1.2rem;
-          left:0rem;
-        }
-      }
-      .form-agree .checkbox_label .check__input {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        clip: rect(0 0 0 0);
-        margin: -1px;
-        border: 0;
-        padding: 0;
-      }
-      .form-agree .checkbox_label .check__box {
-        position: absolute;
-        width: 1.5rem;
-        height: 1.5rem;
-        background-image: none;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        border: 1px solid $dark-font;
-        border-radius: 5px;
-        margin-left: -1rem;
-        overflow: visible;
-        transition: background-image 0.3s ease-in;
-      }
-      .form-agree .checkbox_label .check__input:checked + .check__box {
-        background-image: url("data:image/svg+xml,%3Csvg width='31' height='33' viewBox='0 0 31 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 10.7703L14.5 28L28 3' stroke='%2376489b' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: bottom;
-      }
-    
+  input {
+    display: block;
+    min-width: 90%;
+    outline: none;
+    background: none;
+    border: 1px solid $dark-font;
+    appearance: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    color: $dark-font;
+    padding: .5rem;
+
+    border-radius: 5px;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $accent-purple;
+    }
+
+  }
+
+  [type='submit'] {
+    display: block;
+    min-width: 90%;
+    outline: none;
+    background: $accent-purple;
+    color: $light-font;
+    border: 1px solid $accent-purple;
+    appearance: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+
+    padding: .5rem;
+
+    border-radius: 5px;
+
+    &:active {
+      outline: none;
+      border: 1px solid $accent-green;
+      background: $accent-green;
+      color: $light-font;
+    }
+
+    &:focus {
+      outline: none;
+      border: 1px solid $accent-green;
+      background: $accent-green;
+      color: $light-font;
+    }
+
+  }
+
+  //      .select{
+  //          position: relative;
+  //          margin-bottom: 1rem;
+  //          outline: none;
+  //          &:after{
+  //              content: '';
+  //              display: block;
+  // //              width: 0;
+  // // height: 0;
+  // border-style: solid;
+  // border-width: 10px 10px 0 10px;
+  // border-color: #a46fcf transparent transparent transparent;
+  // position: absolute;
+  // top:40%;
+  // right: 1rem;
+  // pointer-events: none;
+
+  //          }
+
+  //          select{
+  //              display: block;
+  //              min-width: 100%;
+  //             outline: none;
+  //              background: none;
+  //              border:1px solid $dark-font;
+  //              appearance: none;
+  //              font-family: 'Raleway', sans-serif;
+  //              font-size: 1rem;
+  //              color: $dark-font;
+  //              padding: .5rem;
+
+  //            border-radius: 5px;
+  //            &:focus{
+  //                outline: none;
+  //                border:1px solid $accent-purple;
+  //            }
+
+  //          }
+  //      }
+  .form-agree .checkbox_label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 0.7rem;
+    color: $accent-purple;
+    padding-left: 1rem;
+    flex-wrap: wrap;
+
+    p {
+      padding-left: 2rem;
+    }
+
+    .message {
+      position: absolute;
+      bottom: -1.2rem;
+      left: 0rem;
+    }
+  }
+
+  .form-agree .checkbox_label .check__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    border: 0;
+    padding: 0;
+  }
+
+  .form-agree .checkbox_label .check__box {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    border: 1px solid $dark-font;
+    border-radius: 5px;
+    margin-left: -1rem;
+    overflow: visible;
+    transition: background-image 0.3s ease-in;
+  }
+
+  .form-agree .checkbox_label .check__input:checked+.check__box {
+    background-image: url("data:image/svg+xml,%3Csvg width='31' height='33' viewBox='0 0 31 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 10.7703L14.5 28L28 3' stroke='%2376489b' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+  }
+
 }
-@media all and(max-width:768px){
-  .overlay .form__body{
-   // height: 90%;
+
+@media all and(max-width:769px) {
+  .overlay .form__body {
+    // height: 90%;
     width: 80%;
   }
 }

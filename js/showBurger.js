@@ -13,7 +13,12 @@ function showBurger() {
         l1.classList.toggle('transform45deg');
         l3.classList.toggle('transformMin45deg');
         navBar.classList.toggle('transformTransX');
-        document.body.style.overflow = 'hidden';
+        if(!navBar.classList.contains('transformTransX')){
+              document.body.style.overflow = 'hidden';
+        }else{
+            document.body.style.overflow = '';
+        }
+      
         line.forEach(elem => {
             elem.classList.toggle('white');
         })

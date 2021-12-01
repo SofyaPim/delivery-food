@@ -1,88 +1,118 @@
-.about{
-   background:#f4f8f1;
+.about {
+    background: #f4f8f1;
     padding: 2rem 4rem;
 }
-.about-content{
+
+.about-content {
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
 
-.regular-text{
-    max-width: 600px;
-    margin-left: 1rem;
+    .regular-text {
+        max-width: 600px;
+        margin-left: 1rem;
+    }
+
 }
 
-}
-.about-image{
+.about-image {
     margin: 0 auto;
     width: 50%;
-    img{
+
+    img {
         width: 100%;
         max-width: 800px;
-        
+
 
     }
 }
-.team{
+
+.team {
     padding: 2rem 4rem;
 }
-.about-team{
-  
+
+.about-team {
+
     display: flex;
     justify-content: space-evenly;
     width: 100%;
     flex-wrap: wrap;
-    .team-item{
-       min-width: 300px;
-       max-width: 300px;
-       margin: .5rem auto;
+
+    .team-item {
+        min-width: 300px;
+        max-width: 300px;
+        margin: .5rem auto;
         position: relative;
         display: flex;
         flex-direction: column;
-        align-items:flex-start;
+        align-items: flex-start;
         background-color: $light-font;
         @include shadow;
         //padding: 1rem;
-border-radius:10px;
-overflow: hidden;
+        border-radius: 10px;
+        overflow: hidden;
 
-        img{
-          //  position: absolute;
+        img {
+            //  position: absolute;
             width: 120%;
             // top:0;
             // right: 0;
             // z-index: 0;
             margin: 0;
         }
-        .team-item-header{
-              position: absolute;
+
+        .team-item-header {
+            position: absolute;
             margin: 1rem;
             width: 65%;
             font-family: 'Raleway', sans-serif;
-          //  margin-bottom: 150px;
+            //  margin-bottom: 150px;
             z-index: 2;
         }
-       
+
     }
-    .small-text{
+
+    .small-text {
         padding: 1rem;
     }
 
 }
-@media all and (max-width: 768px) {
-    .about{
-     
-         padding: 1rem 2rem;
-     }
-     .about-image{
-         margin: 0;
-         width: 100%;
-     }
-     .about-content{
-         flex-direction: column;
-         align-items:flex-start;
-     }
-     .team{
-         padding: 2rem;
-     }
+
+@media all and (max-width: 769px) {
+    .about {
+
+        padding:  2rem;
+    }
+
+    .about-image {
+        margin: 0;
+        width: 100%;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .team {
+        padding: 2rem;
+    }
+}
+
+@media all and (max-width: 416px) {
+    .about {
+
+        padding: 1rem 1rem;
+
+
+    }
+
+    .about-team .team-item {
+        min-width: 250px;
+        max-width: 250px;
+    }
+
+    .team {
+        padding: 1rem;
+    }
 }

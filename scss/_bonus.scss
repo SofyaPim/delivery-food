@@ -1,6 +1,6 @@
 .bonus {
     background: url(../images/bonus-back.png);
-    background-size:cover;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,7 +10,7 @@
         background: linear-gradient(269.82deg, #639A00 -2.39%, rgba(196, 196, 196, 0) 85.86%);
         border-radius: 0px 50px 50px 0px;
         display: flex;
-        align-items:center;
+        align-items: center;
         padding-right: 1rem;
 
         h2 {
@@ -21,41 +21,47 @@
             letter-spacing: 3px;
             text-transform: uppercase;
             color: $light-font;
-           }
-           span{
+        }
+
+        span {
             font-family: 'Raleway', sans-serif;
             font-weight: 900;
-    font-size: 4rem;
-    color: $light-font;
-    margin-left: 2rem;
-}
+            font-size: 4rem;
+            color: $light-font;
+            margin-left: 2rem;
+        }
     }
-    .bonus-image{
-width: 30%;
+
+    .bonus-image {
+        width: 30%;
     }
 }
-@media all and (max-width:768px){
-    .bonus{
-        .bonus-header{
-            h2{
+
+@media all and (max-width:769px) {
+    .bonus {
+        .bonus-header {
+            h2 {
                 font-size: 1rem;
-                
+
             }
-            span{
-                    font-size: 2rem;
-                }
+
+            span {
+                font-size: 2rem;
+            }
         }
     }
 }
-@media all and (max-width:414px){
+
+@media all and (max-width:416px) {
     .bonus {
         .bonus-image {
-       display: none;
-       
-    }
-    .bonus-header{
-        margin: 2rem ;
-        margin-left: 0;
-    }
+            display: none;
+
+        }
+
+        .bonus-header {
+            margin: 2rem;
+            margin-left: 0;
+        }
     }
 }
