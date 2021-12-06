@@ -6,12 +6,9 @@
     background-size: contain;
     background-position: 135% -100px;
     background-repeat: no-repeat;
-    // .slider-wrapper{
-
-    // }
+ 
     .slide {
         margin: 0;
-
         padding: 2rem 4rem;
         display: flex;
         flex-direction: column;
@@ -22,10 +19,10 @@
         .slide-header {
             color: $dark-font;
             width: 45vw;
-            //  height: 23rem;
             transition: transform .3s ease-in;
 
             h1 {
+                min-height: 9rem;
                 padding-top: 30%;
                 padding-left: 2rem;
                 margin: 0;
@@ -35,7 +32,7 @@
                 font-size: 3.5rem;
                 line-height: 1;
                 text-transform: uppercase;
-
+                
             }
 
             h3 {
@@ -53,9 +50,7 @@
 
         .slide-image {
             margin-top: 40px;
-            // width: 50vw;
             display: flex;
-            // justify-content: center;
 
             img {
                 width: 50vw;
@@ -74,71 +69,37 @@
 
     .slide-btns {
         display: flex;
-        //  width: 600px;
+        
 
         .slide-btn {
             cursor: pointer;
 
             background: #ffffff00;
-            //  @include shadow;
             margin: .5rem;
-            //  border-radius: 10px;
             border: none;
             position: relative;
-            // transition: border 0.6s ease-in;
-            //border: 1px solid $light-font;
+        
             display: flex;
 
-            // justify-content: center;
-            // align-items: center;
-            //  text-decoration: none;
-            // color: inherit;
-            //padding: 1rem 2rem;
+            
             img {
                 transition: transform .3s ease-in;
                 width: 4rem;
             }
 
 
-            // p {
-            //     min-width: 100px;
-            //     padding-left: 1rem;
-            //     padding: 1rem;
-            //     font-size: 1.2rem;
-            //     line-height: 1.2;
-            //     margin: 0;
-            // }
-
-            // .btn-icon {
-            //     display: none;
-            //     position: absolute;
-            //     width: 30px;
-            //     height: 30px;
-            //     border-radius: 15px;
-            //     background: $accent-purple;
-
-            //     right: -8%;
-            //     transition: display 0.3s ease-in;
-            //     color: $light-font;
-            //     justify-content: center;
-            //     align-items: center;
-            //     z-index: 7;
-            // }
-
+           
 
         }
 
         .slide-btn.active {
 
-            // border: 1px solid $accent-purple;
-            // color: $accent-purple;
+          
             img {
                 transform: scale(1.1);
             }
 
-            // .btn-icon {
-            //     display: flex;
-            // }
+            
         }
 
 
@@ -220,7 +181,7 @@
                     font-size: 1.8rem;
                     padding: 1rem;
                     padding-bottom: 0;
-
+                    min-height: 2rem;
                 }
 
                 h3 {

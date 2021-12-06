@@ -733,6 +733,7 @@
 }
 
 .main-slider .slide .slide-header h1 {
+  min-height: 9rem;
   padding-top: 30%;
   padding-left: 2rem;
   margin: 0;
@@ -874,6 +875,7 @@
     font-size: 1.8rem;
     padding: 1rem;
     padding-bottom: 0;
+    min-height: 2rem;
   }
   .main-slider .slide .slide-header h3 {
     font-size: 1rem;
