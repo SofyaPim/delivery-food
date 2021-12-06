@@ -2,7 +2,6 @@
   padding: 2rem 4rem;
   color: $dark-font;
 
-  // background:#FFFDF9;
   .order-btn {
     max-width: 200px;
     min-width: 200px;
@@ -37,11 +36,11 @@
         font-weight: 400;
       }
 
-      &:hover {
-        // background-color: $accent-purple;
-        color: $accent-purple;
-        // border: 1px solid $accent-purple;
-      }
+      // &:hover {
+
+      //   color: $accent-purple;
+
+      // }
     }
 
     .tabs-btn.active {
@@ -55,7 +54,7 @@
 
   .calc {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     font-family: 'Raleway', sans-serif;
     font-size: .9rem;
@@ -72,8 +71,9 @@
     }
 
     .price {
-      font-size: 1.5rem;
+      font-size: 2rem;
       font-weight: 800;
+      margin: 0 auto;
 
     }
 
@@ -142,14 +142,14 @@
       transform: translate(3px, -50%) rotate(-45deg);
     }
 
-    .__select-title:hover {
-      border-color: $accent-purple;
-    }
+    // .__select-title:hover {
+    //   border-color: $accent-purple;
+    // }
 
-    .__select-title:hover::before,
-    .__select-title:hover::after {
-      background-color: $accent-purple;
-    }
+    // .__select-title:hover::before,
+    // .__select-title:hover::after {
+    //   background-color: $accent-purple;
+    // }
 
 
 
@@ -206,10 +206,10 @@
 
 
 
-    .__select-label:hover {
-      background-color: $accent-purple;
-      color: $light-font;
-    }
+    // .__select-label:hover {
+    //   background-color: $accent-purple;
+    //   color: $light-font;
+    // }
 
   }
 
@@ -354,14 +354,50 @@
 
 @media all and (max-width: 416px) {
   .dayli-menu {
-    padding: 1rem;}
+    padding: 1rem;
+  }
+
   .dayli-menu .card .card-content .small-text {
     font-size: .8rem;
   }
+
   .dayli-menu .card {
     width: 30%;
     max-width: 250px;
     min-width: 250px;
     padding-top: 12rem;
+  }
 }
-}
+
+@media all and(min-width:1024px) {
+  .dayli-menu {
+    .menu-tabs {
+      .tabs-btn {
+
+        &:hover {
+
+          color: $accent-purple;
+
+        }
+      }
+    }
+
+
+      .calc {
+        .__select-title:hover {
+          border-color: $accent-purple;
+        }
+
+        .__select-title:hover::before,
+        .__select-title:hover::after {
+          background-color: $accent-purple;
+        }
+
+        .__select-label:hover {
+          background-color: $accent-purple;
+          color: $light-font;
+        }
+      }
+    }
+
+  }

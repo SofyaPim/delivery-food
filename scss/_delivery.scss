@@ -49,11 +49,11 @@
             color: $accent-green;
             line-height: 1;
 
-            &:hover {
-                // background-color: $accent-purple;
-                color: $accent-purple;
-                // border: 1px solid $accent-purple;
-            }
+            // &:hover {
+                
+            //     color: $accent-purple;
+               
+            // }
 
 
 
@@ -73,7 +73,28 @@
         min-height: 130px;
     }
 }
-
+@media all and (min-width:1024px){
+    .delivery{
+        .delivery-card-header {
+           
+    
+            .delivery-card-btn {
+               
+    
+                &:hover {
+                    
+                    color: $accent-purple;
+                   
+                }
+    
+    
+    
+            }
+    
+           
+        }
+    }
+}
 @media all and (max-width: 769px) {
     .delivery {
         padding: 2rem;

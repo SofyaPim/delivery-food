@@ -41,16 +41,16 @@
                     transition: width .3s ease-in;
                 }
 
-                &:hover {
-                    color: $accent-orange;
+                // &:hover {
+                //     color: $accent-orange;
 
-                    &::before {
+                //     &::before {
 
-                        width: 100%;
+                //         width: 100%;
 
-                    }
+                //     }
 
-                }
+                // }
             }
 
         }
@@ -96,16 +96,16 @@
                 transition: width .3s ease-in;
             }
 
-            &:hover {
-                color: $accent-green;
+            // &:hover {
+            //     color: $accent-green;
 
-                &::before {
+            //     &::before {
 
-                    width: 100%;
+            //         width: 100%;
 
-                }
+            //     }
 
-            }
+            // }
         }
     }
 
@@ -153,16 +153,16 @@
         font-weight: 600;
         text-transform: uppercase;
         transition-property: color, background-color;
-        // transition-delay: 0.3s, 0.3s;
+        
         transition-duration: 0.3s, 0.3s;
         transition-timing-function: ease-in, ease-in;
         cursor: pointer;
         color: $light-font;
     
-        &:hover {
-            background-color: $accent-purple;
+        // &:hover {
+        //     background-color: $accent-purple;
 
-        }
+        // }
 
     }
 
@@ -263,7 +263,37 @@
     transition: opacity .3s ease-in;
     scroll-behavior: smooth;
 }
-
+@media all and (min-width: 1024px){
+    .wrapper{
+        .order-btn {
+          
+            &:hover {
+                background-color: $accent-purple;
+    
+            }
+    
+        }
+        .nav-bar {
+            .nav-ul {
+            
+            a.nav-item {
+               
+                &:hover {
+                    color: $accent-green;
+    
+                    &::before {
+    
+                        width: 100%;
+    
+                    }
+    
+                }
+            }
+        } 
+        }
+       
+    }
+}
 @media (max-width: 769px) {
     .wrapper {
         .order-btn {

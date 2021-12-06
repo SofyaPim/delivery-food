@@ -48,14 +48,6 @@
   transition: width .3s ease-in;
 }
 
-.wrapper .nav-bar .nav-ul a.nav-item:hover {
-  color: #f9ca47;
-}
-
-.wrapper .nav-bar .nav-ul a.nav-item:hover::before {
-  width: 100%;
-}
-
 .wrapper .nav-bar .social-icons {
   margin-left: 3.6rem;
 }
@@ -96,14 +88,6 @@
   top: 1.2rem;
   -webkit-transition: width .3s ease-in;
   transition: width .3s ease-in;
-}
-
-.wrapper .nav-ul a.nav-item:hover {
-  color: #6bbd27;
-}
-
-.wrapper .nav-ul a.nav-item:hover::before {
-  width: 100%;
 }
 
 .wrapper .section-header {
@@ -162,10 +146,6 @@
           transition-timing-function: ease-in, ease-in;
   cursor: pointer;
   color: #fcfffc;
-}
-
-.wrapper .order-btn:hover {
-  background-color: #76489b;
 }
 
 .wrapper .regular-text {
@@ -267,6 +247,18 @@
   -webkit-transition: opacity .3s ease-in;
   transition: opacity .3s ease-in;
   scroll-behavior: smooth;
+}
+
+@media all and (min-width: 1024px) {
+  .wrapper .order-btn:hover {
+    background-color: #76489b;
+  }
+  .wrapper .nav-bar .nav-ul a.nav-item:hover {
+    color: #6bbd27;
+  }
+  .wrapper .nav-bar .nav-ul a.nav-item:hover::before {
+    width: 100%;
+  }
 }
 
 @media (max-width: 769px) {
@@ -1245,10 +1237,6 @@
   font-weight: 400;
 }
 
-.dayli-menu .menu-tabs .tabs-btn:hover {
-  color: #76489b;
-}
-
 .dayli-menu .menu-tabs .tabs-btn.active {
   background-color: #76489b;
   color: #fcfffc;
@@ -1259,9 +1247,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1281,8 +1269,9 @@
 }
 
 .dayli-menu .calc .price {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 800;
+  margin: 0 auto;
 }
 
 .dayli-menu .calc .__select {
@@ -1351,15 +1340,6 @@
           transform: translate(3px, -50%) rotate(-45deg);
 }
 
-.dayli-menu .calc .__select-title:hover {
-  border-color: #76489b;
-}
-
-.dayli-menu .calc .__select-title:hover::before,
-.dayli-menu .calc .__select-title:hover::after {
-  background-color: #76489b;
-}
-
 .dayli-menu .calc .__select-content {
   position: absolute;
   top: 40px;
@@ -1417,11 +1397,6 @@
   transition: all 0.2s ease-out;
   cursor: pointer;
   overflow: hidden;
-}
-
-.dayli-menu .calc .__select-label:hover {
-  background-color: #76489b;
-  color: #fcfffc;
 }
 
 .dayli-menu .menu-cards-wrap {
@@ -1596,6 +1571,23 @@
   }
 }
 
+@media all and (min-width: 1024px) {
+  .dayli-menu .menu-tabs .tabs-btn:hover {
+    color: #76489b;
+  }
+  .dayli-menu .calc .__select-title:hover {
+    border-color: #76489b;
+  }
+  .dayli-menu .calc .__select-title:hover::before,
+  .dayli-menu .calc .__select-title:hover::after {
+    background-color: #76489b;
+  }
+  .dayli-menu .calc .__select-label:hover {
+    background-color: #76489b;
+    color: #fcfffc;
+  }
+}
+
 .faq {
   padding: 2rem 4rem;
   background: #f4f8f1;
@@ -1725,10 +1717,6 @@
   line-height: 1;
 }
 
-.delivery .delivery-card-header .delivery-card-btn:hover {
-  color: #76489b;
-}
-
 .delivery .delivery-card-header .delivery-card-btn.active {
   background-color: #76489b;
   border: 1px solid #76489b;
@@ -1739,6 +1727,12 @@
   padding: 0;
   max-width: 800px;
   min-height: 130px;
+}
+
+@media all and (min-width: 1024px) {
+  .delivery .delivery-card-header .delivery-card-btn:hover {
+    color: #76489b;
+  }
 }
 
 @media all and (max-width: 769px) {
